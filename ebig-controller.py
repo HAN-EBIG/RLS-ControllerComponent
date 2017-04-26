@@ -41,4 +41,4 @@ def influx_handler(message):
 
 
 # serial_listen(port='/dev/cu.wchusbserial1420', handler=influx_handler)
-serial_listen(port='/dev/ttyUSB0 ', handler=influx_handler)
+serial_listen(port='/dev/ttyUSB0', handler=influx_handler)
