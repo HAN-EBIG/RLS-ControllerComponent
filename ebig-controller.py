@@ -1,17 +1,13 @@
 from influxdb import InfluxDBClient
 
+from myutils.ebig_constants import decode_room_location
+from myutils.ebig_constants import location_exists
 from myutils.listener import serial_listen
 
-ROOM_LOCATIONS = {
-    1: '',
-    2: '',
-    50: 'Uwe-NO-0.01',
-    51: 'Uwe-NO-0.02'
-}
 
 def influx_handler(message):
-    print "Message: %s" % message
-    if (message.node_id in ROOM_LOCATIONS.keys()):
+    print("Message: %s" % message)
+    if (location_exists(message.node_id)):
         series = []
         # datapackage = {
         #     'measurement':'room',
@@ -26,7 +22,7 @@ def influx_handler(message):
         datapackage = {
             'measurement': 'room',
             'tags': {
-                'roomLocation': ROOM_LOCATIONS.get(message.node_id)
+                'roomLocation': decode_room_location(message.node_id)
             }
         }
 
