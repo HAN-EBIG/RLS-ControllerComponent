@@ -1,128 +1,128 @@
 # https://www.mysensors.org/download/serial_api_14
 
-
 MESSAGE_TYPES = {
+
     # Sent by a node when they present attached sensors. This is usually done
     # in setup() at startup.
-    'M_PRESENTATION': 0,
+    0: 'M_PRESENTATION',
 
     # This message is sent from or to a sensor when a sensor value should be
     # updated
-    'M_SET': 1,
+    1: 'M_SET',
 
     # Requests a variable value (usually from an actuator destined for controller).
-    'M_REQ': 2,
+    2: 'M_REQ',
 
     # This is a special internal message. See table below for the details
-    'M_INTERNAL': 3,
+    3: 'M_INTERNAL',
 
-    'M_STREAM': 4,  # Used for OTA firmware updates
+    4: 'M_STREAM'  # Used for OTA firmware updates
 
     ### PRESENTATION
 }
 
 PRESENTATION = {
-    'S_DOOR': 0,  # Door and window sensors
-    'S_MOTION': 1,  # Motion sensors
-    'S_SMOKE': 2,  # Smoke sensor
-    'S_LIGHT': 3,  # Light Actuator (on/off)
-    'S_DIMMER': 4,  # Dimmable device of some kind
-    'S_COVER': 5,  # Window covers or shades
-    'S_TEMP': 6,  # Temperature sensor
-    'S_HUM': 7,  # Humidity sensor
-    'S_BARO': 8,  # Barometer sensor (Pressure)
-    'S_WIND': 9,  # Wind sensor
-    'S_RAIN': 10,  # Rain sensor
-    'S_UV': 11,  # UV sensor
-    'S_WEIGHT': 12,  # Weight sensor for scales etc.
-    'S_POWER': 13,  # Power measuring device ,like power meters
-    'S_HEATER': 14,  # Heater device
-    'S_DISTANCE': 15,  # Distance sensor
-    'S_LIGHT_LEVEL': 16,  # Light sensor
-    'S_ARDUINO_NODE': 17,  # Arduino node device
-    'S_ARDUINO_RELAY': 18,  # Arduino repeating node device
-    'S_LOCK': 19,  # Lock device
-    'S_IR': 20,  # Ir sender/receiver device
-    'S_WATER': 21,  # Water meter
-    'S_AIR_QUALITY': 22,  # Air quality sensor e.g. MQ-2
-    'S_CUSTOM': 23,  # Use this for custom sensors where no other fits.
-    'S_DUST': 24,  # Dust level sensor
-    'S_SCENE_CONTROLLER': 25,  # Scene controller device':
+    0: 'S_DOOR',  # Door and window sensors
+    1: 'S_MOTION',  # Motion sensors
+    2: 'S_SMOKE',  # Smoke sensor
+    3: 'S_LIGHT',  # Light Actuator (on/off)
+    4: 'S_DIMMER',  # Dimmable device of some kind
+    5: 'S_COVER',  # Window covers or shades
+    6: 'S_TEMP',  # Temperature sensor
+    7: 'S_HUM',  # Humidity sensor
+    8: 'S_BARO',  # Barometer sensor (Pressure)
+    9: 'S_WIND',  # Wind sensor
+    10: 'S_RAIN',  # Rain sensor
+    11: 'S_UV',  # UV sensor
+    12: 'S_WEIGHT',  # Weight sensor for scales etc.
+    13: 'S_POWER',  # Power measuring device ,like power meters
+    14: 'S_HEATER',  # Heater device
+    15: 'S_DISTANCE',  # Distance sensor
+    16: 'S_LIGHT_LEVEL',  # Light sensor
+    17: 'S_ARDUINO_NODE',  # Arduino node device
+    18: 'S_ARDUINO_RELAY',  # Arduino repeating node device
+    19: 'S_LOCK',  # Lock device
+    20: 'S_IR',  # Ir sender/receiver device
+    21: 'S_WATER',  # Water meter
+    22: 'S_AIR_QUALITY',  # Air quality sensor e.g. MQ-2
+    23: 'S_CUSTOM',  # Use this for custom sensors where no other fits.
+    24: 'S_DUST',  # Dust level sensor
+    25: 'S_SCENE_CONTROLLER',  # Scene controller device':
 
 }
 
 SET_REQ = {
     # ,## set, req
-    'V_TEMP': 0,  # Temperature
-    'V_HUM': 1,  # Humidity
-    'V_LIGHT': 2,  # Light status. 0 = off 1 = on
-    'V_DIMMER': 3,  # Dimmer value. 0-100%
-    'V_PRESSURE': 4,  # Atmospheric Pressure
+    0: 'V_TEMP',  # Temperature
+    1: 'V_HUM',  # Humidity
+    2: 'V_LIGHT',  # Light status. 0 = off 1 = on
+    3: 'V_DIMMER',  # Dimmer value. 0-100%
+    4: 'V_PRESSURE',  # Atmospheric Pressure
     # Whether forecast. One of "stable", "sunny", "cloudy", "unstable",
     # "thunderstorm" or "unknown"
-    'V_FORECAST': 5,
-    'V_RAIN': 6,  # Amount of rain
-    'V_RAINRATE': 7,  # Rate of rain
-    'V_WIND': 8,  # Windspeed
-    'V_GUST': 9,  # Gust
-    'V_DIRECTION': 10,  # Wind direction
-    'V_UV': 11,  # UV light level
-    'V_WEIGHT': 12,  # Weight (for scales etc)
-    'V_DISTANCE': 13,  # Distance
-    'V_IMPEDANCE': 14,  # Impedance value
-    'V_ARMED': 15,  # Armed status of a security sensor. 1=Armed, 0=Bypassed
-    'V_TRIPPED': 16,  # Tripped status of a security sensor. 1=Tripped, 0=Untripped
-    'V_WATT': 17,  # Watt value for power meters
-    'V_KWH': 18,  # Accumulated number of KWH for a power meter
-    'V_SCENE_ON': 19,  # Turn on a scene
-    'V_SCENE_OFF': 20,  # Turn of a scene
+    5: 'V_FORECAST',
+    6: 'V_RAIN',  # Amount of rain
+    7: 'V_RAINRATE',  # Rate of rain
+    8: 'V_WIND',  # Windspeed
+    9: 'V_GUST',  # Gust
+    10: 'V_DIRECTION',  # Wind direction
+    11: 'V_UV',  # UV light level
+    12: 'V_WEIGHT',  # Weight (for scales etc)
+    13: 'V_DISTANCE',  # Distance
+    14: 'V_IMPEDANCE',  # Impedance value
+    15: 'V_ARMED',  # Armed status of a security sensor. 1=Armed, 0=Bypassed
+    16: 'V_TRIPPED',  # Tripped status of a security sensor. 1=Tripped, 0=Untripped
+    17: 'V_WATT',  # Watt value for power meters
+    18: 'V_KWH',  # Accumulated number of KWH for a power meter
+    19: 'V_SCENE_ON',  # Turn on a scene
+    20: 'V_SCENE_OFF',  # Turn of a scene
     # Mode of header. One of "Off", "HeatOn", "CoolOn", or "AutoChangeOver"
-    'V_HEATER': 21,
-    'V_HEATER_SW': 22,  # Heater switch power. 1=On, 0=Off
-    'V_LIGHT_LEVEL': 23,  # Light level. 0-100%
-    'V_VAR1': 24,  # Custom value
-    'V_VAR2': 25,  # Custom value
-    'V_VAR3': 26,  # Custom value
-    'V_VAR4': 27,  # Custom value
-    'V_VAR5': 28,  # Custom value
-    'V_UP': 29,  # Window covering. Up.
-    'V_DOWN': 30,  # Window covering. Down.
-    'V_STOP': 31,  # Window covering. Stop.
-    'V_IR_SEND': 32,  # Send out an IR-command
-    'V_IR_RECEIVE': 33,  # This message contains a received IR-command
-    'V_FLOW': 34,  # Flow of water (in meter)
-    'V_VOLUME': 35,  # Water volume
-    'V_LOCK_STATUS': 36,  # Set or get lock status. 1=Locked, 0=Unlocked
-    'V_DUST_LEVEL': 37,  # Dust level
-    'V_VOLTAGE': 38,  # Voltage level
-    'V_CURRENT': 39,  # Current level
+    21: 'V_HEATER',
+    22: 'V_HEATER_SW',  # Heater switch power. 1=On, 0=Off
+    23: 'V_LIGHT_LEVEL',  # Light level. 0-100%
+    24: 'V_VAR1',  # Custom value
+    25: 'V_VAR2',  # Custom value
+    26: 'V_VAR3',  # Custom value
+    27: 'V_VAR4',  # Custom value
+    28: 'V_VAR5',  # Custom value
+    29: 'V_UP',  # Window covering. Up.
+    30: 'V_DOWN',  # Window covering. Down.
+    31: 'V_STOP',  # Window covering. Stop.
+    32: 'V_IR_SEND',  # Send out an IR-command
+    33: 'V_IR_RECEIVE',  # This message contains a received IR-command
+    34: 'V_FLOW',  # Flow of water (in meter)
+    35: 'V_VOLUME',  # Water volume
+    36: 'V_LOCK_STATUS',  # Set or get lock status. 1=Locked, 0=Unlocked
+    37: 'V_DUST_LEVEL',  # Dust level
+    38: 'V_VOLTAGE',  # Voltage level
+    39: 'V_CURRENT',  # Current level
 }
 
 INTERNAL = {
-    'I_BATTERY_LEVEL': 0,  # Use this to report the battery level (in percent 0-100).
-    'I_TIME': 1,
+    0: 'I_BATTERY_LEVEL',  # Use this to report the battery level (in percent 0-100).
+    1: 'I_TIME',
     # Sensors can request the current time from the Controller using this message. The time will be reported as the seconds since 1970
-    'I_VERSION': 2,  # Used to request gateway version from controller.
-    'I_ID_REQUEST': 3,  # Use this to request a unique node id from the controller.
-    'I_ID_RESPONSE': 4,  # Id response back to sensor. Payload contains sensor id.
-    'I_INCLUSION_MODE': 5,  # Start/stop inclusion mode of the Controller (1=start, 0=stop).
-    'I_CONFIG': 6,  # Config request from node. Reply with (M)etric or (I)mperal back to sensor.
-    'I_FIND_PARENT': 7,
+    2: 'I_VERSION',  # Used to request gateway version from controller.
+    3: 'I_ID_REQUEST',  # Use this to request a unique node id from the controller.
+    4: 'I_ID_RESPONSE',  # Id response back to sensor. Payload contains sensor id.
+    5: 'I_INCLUSION_MODE',  # Start/stop inclusion mode of the Controller (1=start, 0=stop).
+    6: 'I_CONFIG',  # Config request from node. Reply with (M)etric or (I)mperal back to sensor.
+    7: 'I_FIND_PARENT',
     # When a sensor starts up, it broadcast a search request to all neighbor nodes. They reply with a   'I_FIND_PARENT_RESPONSE':.
-    'I_FIND_PARENT_RESPONSE': 8,  # Reply message type to   'I_FIND_PARENT': request, #.
-    'I_LOG_MESSAGE': 9,  # Sent by the gateway to the Controller to trace-log a message
-    'I_CHILDREN': 10,
+    8: 'I_FIND_PARENT_RESPONSE',  # Reply message type to   'I_FIND_PARENT': request, #.
+    9: 'I_LOG_MESSAGE',  # Sent by the gateway to the Controller to trace-log a message
+    10: 'I_CHILDREN',
     # A message that can be used to transfer child sensors (from EEPROM routing table) of a repeating node.
-    'I_SKETCH_NAME': 11,  # Optional sketch name that can be used to identify sensor in the Controller GUI
-    'I_SKETCH_VERSION': 12,
+    11: 'I_SKETCH_NAME',  # Optional sketch name that can be used to identify sensor in the Controller GUI
+    12: 'I_SKETCH_VERSION',
     # Optional sketch version that can be reported to keep track of the version of sensor in the Controller GUI.
-    'I_REBOOT': 13,  # Used by OTA firmware updates. Request for node to reboot.
-    'I_GATEWAY_READY': 14,  # Send by gateway to controller when startup is complete.
+    13: 'I_REBOOT',  # Used by OTA firmware updates. Request for node to reboot.
+    14: 'I_GATEWAY_READY',  # Send by gateway to controller when startup is complete.
 }
 
 
 def decode_message_type(message_type):
-    return [k for (k, v) in MESSAGE_TYPES.iteritems() if v == message_type][0]
+    return MESSAGE_TYPES.get(message_type)
 
 
 def decode_sub_type(message_type, sub_type):
@@ -132,8 +132,7 @@ def decode_sub_type(message_type, sub_type):
         lookup_dict = SET_REQ
     elif message_type == 'M_INTERNAL':
         lookup_dict = INTERNAL
-
-    return [k for (k, v) in lookup_dict.iteritems() if v == sub_type][0]
+    return lookup_dict.get(sub_type)
 
 
 def test_decode_message_type():

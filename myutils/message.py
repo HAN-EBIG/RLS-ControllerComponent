@@ -1,6 +1,5 @@
 from myutils import decode_message_type, decode_sub_type
 
-
 class Message:
     ##
     # Message structure from: https://www.mysensors.org/download/serial_api_20#examples
@@ -28,7 +27,7 @@ class Message:
         self.payload = payload
 
     def decode_payload(self):
-        print self.payload
+        print(self.payload)
 
     def __str__(self):
         return "node_id={self.node_id} child_sensor_id={self.child_sensor_id} message_type={self.message_type} ack={self.ack} sub_type={self.sub_type} payload={self.payload}".format(
@@ -37,16 +36,16 @@ class Message:
 
 def test_decode():
     m = Message("12;6;0;0;3;My Light")
-    print m
+    print(m)
     assert m.message_type == 'M_PRESENTATION'
     assert m.sub_type == "S_LIGHT"
 
     m = Message("12;6;1;0;0;36.5")
-    print m
+    print(m)
     assert m.message_type == 'M_SET'
     assert m.sub_type == "V_TEMP"
 
     m = Message("13;7;1;0;2;1")
-    print m
+    print(m)
     assert m.message_type == 'M_SET'
     assert m.sub_type == "V_LIGHT"
