@@ -16,13 +16,12 @@ ROOM_LOCATIONS = {
 SENSOR_MAPPING = {
     1: ('TEMP_MIDDLE', 'V_TEMP'),  # Temperature measured in the middle of a room; sub_type=V_TEMP
     2: ('TEMP_WINDOW', 'V_TEMP'),  # Temperature measured on the windows; sub_type=V_TEMP
-    3: ('DOOR_MAIN_OPEN', 'V_TRIPPED'),  # Boolean shows if door to main floor is open; sub_type=V_TRIPPED
-    4: ('DOOR_LEFT_OPEN', 'V_TRIPPED'),  # Boolean shows if door left (seen from main door) is open; sub_type=V_TRIPPED
-    5: ('DOOR_RIGHT_OPEN', 'V_TRIPPED'),
-# Boolean shows if door right (seen from main door) is open; sub_type=V_TRIPPED
-    6: ('WINDOW_ONE_OPEN', 'V_TRIPPED'),  # Boolean shows if window is open; sub_type=V_TRIPPED
-    7: ('WINDOW_TWO_OPEN', 'V_TRIPPED'),  # Boolean shows if window is open; sub_type=V_TRIPPED
-    8: ('WINDOW_THREE_OPEN', 'V_TRIPPED'),  # Boolean shows if window is open; sub_type=V_TRIPPED
+    3: ('DOOR_MAIN_OPEN', 'V_TRIPPED'),  # Shows if door to main floor is open; sub_type=V_TRIPPED
+    4: ('DOOR_LEFT_OPEN', 'V_TRIPPED'),  # Shows if door left (seen from main door) is open; sub_type=V_TRIPPED
+    5: ('DOOR_RIGHT_OPEN', 'V_TRIPPED'),  # Shows if door right (seen from main door) is open; sub_type=V_TRIPPED
+    6: ('WINDOW_ONE_OPEN', 'V_TRIPPED'),  # Shows if window is open; sub_type=V_TRIPPED
+    7: ('WINDOW_TWO_OPEN', 'V_TRIPPED'),  # Shows if window is open; sub_type=V_TRIPPED
+    8: ('WINDOW_THREE_OPEN', 'V_TRIPPED'),  # Shows if window is open; sub_type=V_TRIPPED
     9: ('LIGHT_INTENSITY', 'V_LIGHT_LEVEL'),  # Light-intensity measured in the middle of a room; sub_type=V_LIGHT_LEVEL
 }
 
