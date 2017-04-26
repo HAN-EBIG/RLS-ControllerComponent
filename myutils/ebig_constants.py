@@ -19,7 +19,7 @@ SENSOR_MAPPING = {
     3: ('DOOR_MAIN_OPEN', 'V_TRIPPED'),  # Boolean shows if door to main floor is open; sub_type=V_TRIPPED
     4: ('DOOR_LEFT_OPEN', 'V_TRIPPED'),  # Boolean shows if door left (seen from main door) is open; sub_type=V_TRIPPED
     5: ('DOOR_RIGHT_OPEN', 'V_TRIPPED'),
-    # Boolean shows if door right (seen from main door) is open; sub_type=V_TRIPPED
+# Boolean shows if door right (seen from main door) is open; sub_type=V_TRIPPED
     6: ('WINDOW_ONE_OPEN', 'V_TRIPPED'),  # Boolean shows if window is open; sub_type=V_TRIPPED
     7: ('WINDOW_TWO_OPEN', 'V_TRIPPED'),  # Boolean shows if window is open; sub_type=V_TRIPPED
     8: ('WINDOW_THREE_OPEN', 'V_TRIPPED'),  # Boolean shows if window is open; sub_type=V_TRIPPED
