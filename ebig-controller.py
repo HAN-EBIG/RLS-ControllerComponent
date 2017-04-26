@@ -1,38 +1,43 @@
 from influxdb import InfluxDBClient
 
 from myutils.ebig_constants import decode_room_location
+from myutils.ebig_constants import decode_sensor
+from myutils.ebig_constants import get_expected_subtype
 from myutils.ebig_constants import location_exists
+from myutils.ebig_constants import sensor_exists
 from myutils.listener import serial_listen
 
 
 def influx_handler(message):
     print("Message: %s" % message)
-    if (location_exists(message.node_id)):
-        series = []
-        # datapackage = {
-        #     'measurement':'room',
-        #     'tags': {
-        #         'roomLocation': 'Tech-No-422'
-        #     },
-        #     'fields':{
-        #         'doorMainOpen':int(message.payload)
-        #     }
-        # }
+    if (location_exists(message.node_id) and sensor_exists(message.child_sensor_id)):
 
-        datapackage = {
+        if (message.sub_type != get_expected_subtype(message.child_sensor_id)):
+            return
+
+        series = []
+
+        base_datapackage = {
             'measurement': 'room',
             'tags': {
                 'roomLocation': decode_room_location(message.node_id)
             }
         }
 
+        ebig_sensor = decode_sensor(message.child_sensor_id)
+
         if (message.sub_type == 'V_TEMP'):
-            datapackage['fields'] = {'tempMiddle': float(message.payload)}
-            series.append(datapackage)
-            client = InfluxDBClient('145.74.104.50', 8086, '', '', 'ebig')
-            client.write_points(series)
+            base_datapackage['fields'] = {ebig_sensor: float(message.payload)}
 
+        elif (message.sub_type == 'V_TRIPPED'):
+            base_datapackage['fields'] = {ebig_sensor: bool(message.payload)}
 
+        elif (message.sub_type == 'V_LIGHT_LEVEL'):
+            base_datapackage['fields'] = {ebig_sensor: int(message.payload)}
+
+        series.append(base_datapackage)
+        client = InfluxDBClient('145.74.104.50', 8086, '', '', 'ebig')
+        client.write_points(series)
 
 
 serial_listen(port='/dev/cu.wchusbserial1420', handler=influx_handler)

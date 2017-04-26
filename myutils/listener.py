@@ -1,12 +1,11 @@
-import serial
-
-from myutils.message import Message
-
-
 ## Mysensors serial protocol message structure:
 # Mysensors serial pattern from: https://www.mysensors.org/download/serial_api_20#examples
 # node-id;child-sensor-id;message-type;ack;sub-type;payload\n
 ##
+import serial
+
+from myutils.message import Message
+
 
 def default_handler(message):
     print(message)
