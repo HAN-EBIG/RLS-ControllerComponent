@@ -1,6 +1,5 @@
 from myutils import decode_message_type, decode_sub_type
 
-
 class Message:
     ##
     # Message structure from: https://www.mysensors.org/download/serial_api_20#examples

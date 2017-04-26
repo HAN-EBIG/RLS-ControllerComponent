@@ -1,7 +1,6 @@
 import serial
 
-from myutils.Message import Message
-
+from myutils.message import Message
 
 ## Mysensors serial protocol message structure:
 # Mysensors serial pattern from: https://www.mysensors.org/download/serial_api_20#examples

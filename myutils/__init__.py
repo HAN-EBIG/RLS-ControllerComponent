@@ -120,7 +120,6 @@ INTERNAL = {
     'I_GATEWAY_READY': 14,  # Send by gateway to controller when startup is complete.
 }
 
-
 def decode_message_type(message_type):
     return [k for (k, v) in MESSAGE_TYPES.iteritems() if v == message_type][0]
 
@@ -134,7 +133,6 @@ def decode_sub_type(message_type, sub_type):
         lookup_dict = INTERNAL
 
     return [k for (k, v) in lookup_dict.iteritems() if v == sub_type][0]
-
 
 def test_decode_message_type():
     assert decode_message_type(0) == 'M_PRESENTATION'
