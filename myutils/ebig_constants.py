@@ -30,6 +30,7 @@ SENSOR_MAPPING = {
     9: ('LIGHT_INTENSITY', 'V_LIGHT_LEVEL'),  # Light-intensity measured in the middle of a room
     10: ('TEMP_RAD_IN', 'V_TEMP'),  # Temperature measured on the input pipe of a radiator
     11: ('TEMP_RAD_OUT', 'V_TEMP'),  # Temperature measured on the output pipe of a radiator
+    12: ('HUMIDITY', 'V_HUM'),  # Humidity measured in the middle of the room
 }
 
 
