@@ -13,8 +13,11 @@
 ROOM_LOCATIONS = {
     1: '',
     2: '',
+    10: 'Tech-NO-4.22',  # Location-ID for room in the Technovium in Njmegen
     50: 'Uwe-NO-0.01',  # Location-ID for Uwe's home office
-    105: 'Uwe-NO-0.02'  # Location-ID for Uwe's ground floor
+    105: 'Uwe-NO-0.02',  # Location-ID for Uwe's ground floor
+    106: 'Jorn-NO-0.01',  # Location-ID for Jorn's ground floor
+    107: 'Ties-NO-0.01',  # Location-ID for Ties' ground floor
 }
 
 # Sensor ID mapped against field name in Influx, and mysensors sub-type
