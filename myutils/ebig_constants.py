@@ -36,6 +36,7 @@ SENSOR_MAPPING = {
     12: ('HUMIDITY', 'V_HUM'),  # Humidity measured in the middle of the room
     13: ('POWER_W', 'V_WATT'),  # Actual electricity power delivered (+P) in kW
     14: ('POWER_KWH', 'V_KWH'),  # Meter Reading electricity delivered to client in kWh
+    255: ('BATTERY_LEVEL', 'I_BATTERY_LEVEL'),  # Battery-level
 }
 
 
