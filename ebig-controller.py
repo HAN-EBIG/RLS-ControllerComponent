@@ -43,6 +43,9 @@ def influx_handler(message):
 
         elif (message.sub_type == 'V_KWH'):
             base_datapackage['fields'] = {ebig_sensor: float(message.payload)}
+
+        elif (message.sub_type == 'I_BATTERY_LEVEL'):
+            print("Battery level: %d" % message.payload)
             
         series.append(base_datapackage)
         client = InfluxDBClient('145.74.104.50', 8086, 'sensorcontroller', '@sensorpass@', 'ebig')
