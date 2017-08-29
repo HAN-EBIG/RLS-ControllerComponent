@@ -14,10 +14,14 @@ ROOM_LOCATIONS = {
     1: '',
     2: '',
     10: 'Tech-NO-4.22',  # Location-ID for room in the Technovium in Njmegen
-    11: 'R26-D-1.04',  # Door node D1.04
-    12: 'R26-D-1.04',  # Ceiling node D1.04
-    13: 'R26-D-1.04',  # Left radiator node D1.04: WINDOW_ONE
-    14: 'R26-D-1.04',  # Right radiator node D1.04
+    11: 'R26-D-1.04',  # Door node
+    12: 'R26-D-1.04',  # Ceiling node
+    13: 'R26-D-1.04',  # Left radiator node
+    14: 'R26-D-1.04',  # Right radiator node
+    21: 'R26-D-1.12',  # Door node
+    22: 'R26-D-1.12',  # Ceiling node
+    23: 'R26-D-1.12',  # Left radiator node
+    24: 'R26-D-1.12',  # Right radiator node
     50: 'Uwe-NO-0.01',  # Location-ID for Uwe's home office
     105: 'Uwe-NO-0.02',  # Location-ID for Uwe's ground floor
     106: 'Jorn-NO-0.01',  # Location-ID for Jorn's ground floor
