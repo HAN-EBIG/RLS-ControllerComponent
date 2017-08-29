@@ -30,7 +30,7 @@ def influx_handler(message):
             base_datapackage['fields'] = {ebig_sensor: float(message.payload)}
 
         elif (message.sub_type == 'V_TRIPPED'):
-            base_datapackage['fields'] = {ebig_sensor: bool(message.payload)}
+            base_datapackage['fields'] = {ebig_sensor: int(message.payload)}
 
         elif (message.sub_type == 'V_LIGHT_LEVEL'):
             base_datapackage['fields'] = {ebig_sensor: int(message.payload)}
