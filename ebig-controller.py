@@ -9,8 +9,6 @@ from myutils.listener import serial_listen
 
 
 def influx_handler(message):
-    print("Message: %s" % message)
-
     if (location_exists(message.node_id) and sensor_exists(message.child_sensor_id)):
         series = []
         base_datapackage = {
