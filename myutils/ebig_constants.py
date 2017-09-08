@@ -22,6 +22,11 @@ ROOM_LOCATIONS = {
     22: 'R26-D-1.12',  # Ceiling node
     23: 'R26-D-1.12',  # Left radiator node
     24: 'R26-D-1.12',  # Right radiator node
+    25: 'R26-E-0.12',  # Left radiator node at window
+    26: 'R26-E-0.12',  # Right radiator node at window
+    27: 'R26-E-0.12',  # Window/radiator node at door
+    28: 'R26-E-0.12',  # Ceiling node
+    30: 'R26-E-0.12',  # Door node
     50: 'Uwe-NO-0.01',  # Location-ID for Uwe's home office
     105: 'Uwe-NO-0.02',  # Location-ID for Uwe's ground floor
     106: 'Jorn-NO-0.01',  # Location-ID for Jorn's ground floor
@@ -51,6 +56,8 @@ SENSOR_MAPPING = {
     28: ('TEMP_RAD2_OUT', 'V_TEMP'),  # Temperature measured on the output pipe of a radiator
     29: ('TEMP_RAD3_IN', 'V_TEMP'),  # Temperature measured on the input pipe of a radiator
     30: ('TEMP_RAD3_OUT', 'V_TEMP'),  # Temperature measured on the output pipe of a radiator
+    31: ('TEMP_RAD4_IN', 'V_TEMP'),  # Temperature measured on the output pipe of a radiator
+    32: ('TEMP_RAD4_OUT', 'V_TEMP'),  # Temperature measured on the output pipe of a radiator
     35: ('HUMIDITY', 'V_HUM'),  # Humidity measured in the middle of the room
     200: ('POWER_W', 'V_WATT'),  # Actual electricity power delivered (+P) in kW
     201: ('POWER_KWH', 'V_KWH'),  # Meter Reading electricity delivered to client in kWh
