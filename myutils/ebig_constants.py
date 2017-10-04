@@ -27,6 +27,7 @@ ROOM_LOCATIONS = {
     27: 'R26-E-0.12',  # Window/radiator node at door
     28: 'R26-E-0.12',  # Ceiling node
     30: 'R26-E-0.12',  # Door node
+    49: 'DEMO-ROOM',  # Demo node
     50: 'Uwe-NO-0.01',  # Location-ID for Uwe's home office
     105: 'Uwe-NO-0.02',  # Location-ID for Uwe's ground floor
     106: 'Jorn-NO-0.01',  # Location-ID for Jorn's ground floor
